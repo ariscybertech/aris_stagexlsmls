@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>StageXL Periodic Table Sample</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <meta property="og:image" content="http://www.stagexl.org/samples/common/img/stagexl064.png">
+    <meta property="og:title" content="StageXL Periodic Table Sample">
+    <meta property="og:type" content="website">
+    <meta property="og:description"
+      content="This demo shows the periodic table of chemical elements.
+      All display objects are drawn as vector graphics and cached as
+      bitmaps for optimal performance. The animations are done with the
+      Juggler animation framework which is fully integrated in StageXL.
+      The stage is automatically scaled to fill the whole browser window.">
+
+    <link href="../common/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="../common/css/bootstrap.min.css" rel="stylesheet">
+
+    <style type="text/css">
+
+      /* stage-full-window */
+      body.stage-full-window { margin: 0; padding: 0; overflow: hidden; }
+      canvas.stage-full-window { width: 100%; height: 100%; position:fixed; }
+
+      /* stage-fixed-size */
+      canvas.stage-fixed-size { width: 800px; height: 600px; border: 1px dotted black; }
+
+      /* stage-full-screen */
+      /* https://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html#:fullscreen-pseudo-class */
+      canvas.stage-full-screen:-webkit-full-screen {
+        position:fixed; top:0; right:0; bottom:0; left:0; margin:0;
+        box-sizing:border-box; width:100%; height:100%; object-fit:contain;
+      }
+      canvas.stage-full-screen:-moz-full-screen {
+        position:fixed; top:0; right:0; bottom:0; left:0; margin:0;
+        box-sizing:border-box; width:100%; height:100%; object-fit:contain;
+      }
+      canvas.stage-full-screen:fullscreen {
+        position:fixed; top:0; right:0; bottom:0; left:0; margin:0;
+        box-sizing:border-box; width:100%; height:100%; object-fit:contain;
+      }
+    </style>
+  </head>
+
+  <body class="stage-full-window">
+
+    <canvas id="stage" class="stage-full-window stage-full-screen"></canvas>
+
+    <script type="application/dart" src="index.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>

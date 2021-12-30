@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>StageXL Mask Sample</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:image" content="http://www.stagexl.org/samples/common/img/stagexl064.png">
+  <meta property="og:title" content="StageXL Mask Sample">
+  <meta property="og:type" content="website">
+  <meta property="og:description"
+    content="This example shows how to mask display objects.
+    StageXL supports masks with user definable shapes. The example
+    also demonstrates that masks are bound to display objects
+    and therefore are accordingly transformed and animated.">
+
+  <link href="../common/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="../common/css/bootstrap.min.css" rel="stylesheet">
+
+  <style type="text/css">
+    body {
+      background-color: LightGray;
+    }
+  
+    #stage {
+      background-color: White;
+      border-style: solid;
+      border-width: 3px;
+      border-color: #900000;
+    }
+  
+    #centerContainer {
+      position: absolute;
+      top: 50%;
+      margin-top: -300px;
+      left: 0;
+      width: 100%;
+    }
+  
+    #centerContent {
+      width: 940px;
+      height: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="centerContainer">
+    <div id="centerContent">
+
+      <div class="row" style="width:946px; margin-bottom: 10px;">
+        <button id="mask-none" class="btn btn-primary btn-lg">No Mask</button>
+        <button id="mask-rectangle" class="btn btn-primary btn-lg">Rectangle Mask</button>
+        <button id="mask-circle" class="btn btn-primary btn-lg">Circle Mask</button>
+        <button id="mask-custom" class="btn btn-primary btn-lg">Custom Mask</button>
+        <button id="mask-spin" class="btn btn-warning btn-lg pull-right" style="width:100px">Spin</button>
+      </div>
+
+      <div class="row">
+        <canvas id="stage" width="940" height="500"></canvas>
+        <div class="well well-sm" style="width: 946px">
+          <a href="../index.html#examples"> 
+            click here for more StageXL samples 
+          </a> 
+          <a target='_blank' href="https://github.com/bp74/StageXL_Samples/tree/master/web/mask" class="pull-right"> 
+            click here to see the source code 
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="application/dart" src="index.dart"></script>
+  <script src="packages/browser/dart.js"></script>
+
+</body>
+</html>
